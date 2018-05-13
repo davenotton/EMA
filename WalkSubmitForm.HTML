@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Walk proposal form</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- Navigation menu. -->
+    <nav id="main-menu">
+        <ul id="menu-list">
+            <li id="logo">
+                <span><img src="img/Logo.png" id="ou"></span>
+                <h1 id="walking-club">Walking Club</h1><span></span>
+            </li>
+            <li>
+                <a href="" style="text-decoration: none;">Walk events</a>
+            </li>
+            <li>
+                <a href="" style="text-decoration: none">Members</a>
+            </li>
+            <li>
+                <a href="" style="text-decoration: none;">Mail</a>
+            </li>
+            <li>
+                <a href="" style="text-decoration: none;">News</a>
+            </li>
+            <li>
+                <a href="" style="text-decoration: none;">Log out</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Search bar. -->
+    <div id="search-div">
+        <label id="search-label">Search Walks:</label><input type="Search" id="search-input" placeholder="Search...">
+    </div>
+
+
+    <!-- Walk proposal form. -->
+    <form action="http://norton.open.ac.uk/reflect.php" id="add-walk-form" method="post" name="add-walk-form">
+        <fieldset>
+            <legend>Proposal for walk submission form.</legend>
+            <div id="feilds">
+                <label>Name of the walk:</label> <input id="input" maxlength="50" name="name" placeholder="Enter name for walk" required="" type="text" value=""><br>
+                <label>Date:</label><input id="input" name="walk_date" required="" type="date" value="today"><br>
+                <label>Start time:</label><input id="input" name="start_time" required="" type="time" value="00:00:00"><br>
+                <label>Leader:</label><input id="input" name="leader" placeholder="Leaders name" required="" type="text" value=""><br>
+                <label>Meeting point:</label><input id="input" maxlength="50" name="meeting_point[]" placeholder="State a meeting location" required="" type="text" value=""><br>
+                <label>Latitude:</label><input id="input" max="90.0000" min="-90.0000" name="meeting_point[]" placeholder="50.50641" required="" step="00.00001" type="number" value="">&#176;<br>
+                <label>Longitude:</label><input id="input" max="180.0000" min="-180.0000" name="meeting_point[]" placeholder="-3.5156" required="" step="0.0001" type="number" value="">&#176;<br>
+                <label>Distance:</label><input id="input" min="0.1" name="distance" placeholder="Enter a number" required="" step="0.1" type="number" value=""> Miles<br>
+                <label>Route description:</label><input id="input" maxlength="100" name="route" placeholder="Breif description of the walks route" required="" type="text" value=""><br>
+                <label>Notes:</label>
+                <textarea id="input" maxlength="250" name="notes" placeholder="notes" required="">notes...</textarea><br>
+                <!-- Hidden feild's to set status and track user. -->
+                 <input name="status" type="hidden" value="proposed"> <input name="sessionID" type="hidden" value="ABCDEF012345">
+                <div id="button">
+                    <button id="submit-button" onclick="send()">Submit Walk Proposal</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
