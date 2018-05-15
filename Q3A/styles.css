@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #a8ffac;
+}
+main-menu {
+	display: block;
+	float: left;
+	width: 100%;
+}
+#menu-list {
+	list-style-type: none;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #a9a8ff;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#ou{
+	height: 2.9em;
+	padding-left: 2px;
+}
+#logo {
+	display: inline-block;
+	background-color: white;
+	font-family: Trebuchet MS;
+	vertical-align: middle;
+}
+#walking-club{
+	padding: 1px;
+	font-size: 1em;
+}
+li {
+	display: inline-block;
+	border-width: 2px;
+	border-style: solid;
+	background-color: #ff5d1d;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+li a {
+	height: 2em;
+	font-size: 2em;
+	font-family: Trebuchet MS;
+	color: yellow;
+	padding-left: 2px;
+	padding-right: 2px;
+	overflow: hidden;
+}
+li a:hover {
+	text-overflow: inherit;
+	overflow: visible;
+	background-color: white;
+	color: #ff5d1d;
+}
+#search-div{
+	margin: 2%;
+	font-size: 18px;
+	font-family: Trebuchet MS;
+	background-color: grey;
+	padding-bottom: 8px;
+	border-radius: 9px;
+
+}
+#search-input{
+	width: 30%;
+	margin-top: 12px;
+	font-size: 18px;
+	font-family: Trebuchet MS;
+}
+fieldset {
+	margin: 2px;
+	padding: 4px;
+	border-color: white;
+	border-radius: 9px;
+	border-width: 8px;
+	border-style: solid;
+}
+legend {
+	margin-top: 2%;
+	margin-bottom: 1%;
+	margin-left: 3%;
+	font-size: 25px;
+	font-family: Trebuchet MS;
+	padding-left: 1%;
+	padding-right: 1%;
+}
+#add-walk-form {
+	margin: 2%;
+	font-size: 18px;
+	font-family: Trebuchet MS;
+}
+label {
+	float: left;
+	width: 8em;
+	margin-top: 12px;
+	clear: left;
+	margin-left: 27%
+}
+#input {
+	width: 30%;
+	margin-top: 12px;
+	font-size: 18px;
+	font-family: Trebuchet MS;
+}
+#button {
+	text-align: center;
+}
+#submit-button {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 12px;
+	font-size: 18px;
+	padding: 2px;
+	font-family: Trebuchet MS;
+}
+*:focus {
+	color: #000;
+	background: #faec71;
+}
+#feilds {
+	margin: 5%;
+}
+/* Media query Start*/
+
+@media screen and (max-width: 500px) {
+	#ou {
+		height: 5em;
+	}
+	#walking-club{
+		font-size: 1.6em;
+
+	}
+	li {
+		width: 100%;
+		margin-right: 2px;
+		float: left;
+		font-size: 0.6em;
+		margin-top: 1px;
+	}
+	fieldset {
+		border-width: 3px;
+	}
+	legend {
+		font-size: 18px
+	}
+	label {
+		font-size: 14px;
+		margin-left: 2%;
+	}
+	#search-input {
+		font-size: 14px;
+		width: 50%;
+	}
+	#input {
+		font-size: 14px;
+		width: 50%;
+	}
+	#feilds {
+		margin: 0;
+		font-size: 14px;
+	}
+	#submit-button {
+		font-size: 14px;
+	}
+	#logo{
+		text-align: center;
+	}
+	span{
+		margin-right: auto;
+	    margin-left: auto;
+	}
+}
