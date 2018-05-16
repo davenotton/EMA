@@ -34,7 +34,10 @@
 
     <!-- Search bar. -->
     <div id="search-div">
-        <label id="search-label">Search Walks:</label><input type="Search" id="search-input" placeholder="Search...">
+      <form action="http://norton.open.ac.uk/reflect.php" method="post">
+        <label id="search-label">Search Walks:</label><input name="search-term" type="search" id="search-input" placeholder="Search...">
+        <button id="submit-button" onclick="send()">Search</button>
+      </form>
     </div>
 
 

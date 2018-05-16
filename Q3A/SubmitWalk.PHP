@@ -1,3 +1,4 @@
+
 <?php
 
 $databasename ='walkingclub.sqlite';
@@ -7,8 +8,8 @@ if($db === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
-///Asign to var
 
+///Asign to var
 $name = $_POST['name'];
 $walk_date = $_POST['walk_date'];
 $start_time = $_POST['start_time'];
@@ -38,5 +39,7 @@ $stmt->bindValue(':notes', $notes);
 $stmt->bindValue(':status', $status);
 
 $stmt->execute();
+
+//echo"<p>Data recived - proposed walk is saved to server.</p>";"
 
 ?>
