@@ -9,7 +9,7 @@
 
    </head>
    <body>
-     
+
 <?php
 
 $databasename ='walkingclub.sqlite';
@@ -19,24 +19,42 @@ if($db === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
   }
 
-//if(isset($_POST['search'])){
-  $webdata['query'] = $_POST['search-term'];
+if(isset($_POST['search-term']) && $_POST['search-term'] != ""){
 
-  echo "<p>Searching...</p>";
+$webdata['query'] = $_POST['search-term'];
 
-$sql = 'SELECT name FROM walk WHERE name LIKE :query';
+//$str = "17";
+$num =(int)7;
+echo $num;
+
+echo "<p>Searching...</p>";
+$sql = "SELECT name, walk_date FROM walk WHERE walk_date > (SELECT DATETIME('now','$num days'))";
+//$sql = "SELECT name, walk_date FROM walk WHERE walk_date > (SELECT STRFTIME) ";
+//$sql = "SELECT name, walk_date FROM walk WHERE walk_date > (SELECT DATETIME('now', '-7day'))";
+//$sql = "SELECT name, walk_date FROM walk WHERE walk_date BETWEEN :query AND 2018-05-17";
+//$sql = "SELECT name, walk_date FROM walk WHERE walk_date LIKE :query";
 
 $stmt = $db->prepare($sql);
 $stmt->bindValue(":query" , '%'.$webdata['query'].'%',SQLITE3_TEXT);
 $result = $stmt->execute();
 
-if ($row = $result->fetchArray()){
-  echo '<p>' . htmlspecialchars($row['name']) . '</p>';
+$currentDate = date("Y-m-d"); /// date test
+echo "<p>$currentDate</p>";
+///$currentDate .= +1 d;
+echo "<p>$currentDate</p>";
+
+while ($row = $result->fetchArray()){
+  //for($currentDate)
+  echo '<p>' . "Name: " . htmlspecialchars($row['name']) . " | Walk-date: " . htmlspecialchars($row['walk_date']) . '</p>';
   //echo"<input type='checkbox' name='select-result'>"."Select to edit.";
 }
 
-else {
-  echo "<p>No data copuld be found - Please enter new search.</p>";
+if(!$row = $result->fetchArray()) {
+  echo "<p>No data could be found - Please enter new search.</p>";
+}
+}
+else{
+  echo '<p>Please enter a search query.</p>';
 }
 
 ?>
