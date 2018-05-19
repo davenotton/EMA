@@ -12,7 +12,7 @@ echo '<p><b>Removing any existing SQLite walk database table...</b></p>';
 $sql = 'DROP TABLE IF EXISTS "walk"';
 $db->exec($sql) or die('Drop table failed');
 
-echo '<p>Walk database table removed.</p>'; 
+echo '<p>Walk database table removed.</p>';
 echo '<p><b>Creating new SQLite walk database table...</b></p>';
 
 $columns = '"id" INTEGER PRIMARY KEY NOT NULL , "name" TEXT, "walk_date" TEXT, "start_time" TEXT, "leader" TEXT, "meeting_point" TEXT, "meeting_latlong" TEXT, "distance" TEXT, "route" TEXT , "notes" TEXT, "status" TEXT';
@@ -20,7 +20,7 @@ $columns = '"id" INTEGER PRIMARY KEY NOT NULL , "name" TEXT, "walk_date" TEXT, "
 $sql = 'CREATE TABLE "walk" (' . $columns . ')';
 $db->exec($sql) or die('Create table failed');
 
-echo '<p>Walk database table created with columns:</p>'; 
+echo '<p>Walk database table created with columns:</p>';
 echo "<p>$columns</p>";
 echo '<p><b>Adding example data to the database table...</b></p>';
 
@@ -42,7 +42,7 @@ $db->exec($sql) or die('Add data failed');
 $sql="INSERT INTO walk VALUES (6,'Kinder Scout', '2018-06-16', '10:30:00', 'Chris L', 'Bowden Bridge car park near Hayfield', '53.379405,-1.9289984', '8', 'Kinder Scout circular walk', 'Rough path in places', '')";
 $db->exec($sql) or die('Add data failed');
 
-echo '<p>Data added to table:</p>'; 
+echo '<p>Data added to table:</p>';
 
 echo '<pre>';
 $results = $db->query("SELECT * FROM walk");

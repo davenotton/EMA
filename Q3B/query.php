@@ -1,16 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>Search results</title>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="styles.css">
-
-   </head>
-   <body>
-
 <?php
+///display html menu.
+$pageTitle = "Search Results";
+require("header.php");
+//require "validateData.php";
 
 $databasename ='walkingclub.sqlite';
 $db = new SQLite3($databasename);            ///connect to database.
@@ -56,6 +49,3 @@ else{ ///incorrect search term entered.
   echo '<p>Please enter a search query.</p>';
 }
 ?>
-
-</body>
-</html>

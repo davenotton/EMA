@@ -1,5 +1,13 @@
-
 <?php
+
+//require("validateData.php");
+//if($valid == TRUE){
+$pageTitle = "Walk Submitted";
+//}
+//else{
+  //$pageTitle = "Walk Submission Failed";
+//}
+require("header.php");
 
 $databasename ='walkingclub.sqlite';
 $db = new SQLite3($databasename);
@@ -41,5 +49,10 @@ $stmt->bindValue(':status', $status);
 $stmt->execute();
 
 //echo"<p>Data recived - proposed walk is saved to server.</p>";"
-
 ?>
+
+
+<div id="ok-div">
+  <p id="data-sent">Data recived - proposed walk is saved to server.</p>
+  <a href="WalkSubmitForm.html"><button id="ok-button">OK</button></a>
+</div>

@@ -8,6 +8,7 @@ if($db === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+require "validateData.php";
 
 ///Asign to var
 $name = $_POST['name'];

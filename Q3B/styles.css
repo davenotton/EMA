@@ -58,6 +58,18 @@ li a:hover {
 	background-color: white;
 	color: #ff5d1d;
 }
+.info{
+	font-size: 12px;
+	font-family: arial;
+	margin-left: 40%;
+	color: #D0FFD0;
+}
+.data-sent{
+font-size: 12px;
+font-family: arial;
+margin-left: 40%;
+color: blue;
+}
 #search-div{
 	margin: 2%;
 	font-size: 18px;
@@ -72,6 +84,8 @@ li a:hover {
 	margin-top: 12px;
 	font-size: 18px;
 	font-family: Trebuchet MS;
+}
+
 }
 fieldset {
 	margin: 2px;
@@ -125,6 +139,19 @@ label {
 }
 #feilds {
 	margin: 5%;
+}
+#ok-div{
+	text-align: center;
+	padding-top: 4px;
+}
+#ok-button{
+	border-radius: 12px;
+	background-color: #008CBA;
+	width: 10%;
+	height: 40px;
+	font-size: 20px;
+	color: white;
+	margin-top: 8px;
 }
 /* Media query Start*/
 
