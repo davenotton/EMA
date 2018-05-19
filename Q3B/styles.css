@@ -4,6 +4,9 @@
 }
 body {
 	background-color: #a8ffac;
+	position: relative;
+	padding-bottom: 6%;
+
 }
 main-menu {
 	display: block;
@@ -89,7 +92,7 @@ color: blue;
 }
 fieldset {
 	margin: 2px;
-	padding: 4px;
+	padding: 2px;
 	border-color: white;
 	border-radius: 9px;
 	border-width: 8px;
@@ -138,7 +141,7 @@ label {
 	background: #faec71;
 }
 #feilds {
-	margin: 5%;
+	margin: 1%;
 }
 #ok-div{
 	text-align: center;
@@ -153,8 +156,72 @@ label {
 	color: white;
 	margin-top: 8px;
 }
-/* Media query Start*/
+#results {
+	display: block;
+	overflow-x: auto;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+	margin-left: 5%;
+}
+#results td, #results th {
+	border: 1px solid #ddd;
+  padding: 8px;
+}
+#results tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+#results tr:hover {
+	background-color: #ddd;
+}
+#results th {
+	padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #238e8d;
+  color: white;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+#searching{
+	margin-left: 10%;
+	margin-bottom: 4px;
+}
+footer{
+	background-color: #222222;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 6%;
+	padding-top: 1%;
+}
+#copywrite{
+	border: unset;
+	background-color: unset;
+	color: white;
+}
+#contact, #contact a{
+	border: unset;
+	background-color: unset;
+	font-size: unset;
+	font-family: unset;
+	color: white;
+}
+.social, .social a {
+	border: unset;
+	background-color: unset;
+	color: white;
+	height: unset;
+	font-size: unset;
+}
+.social a:hover {
+	text-overflow: unset;
+	overflow: unset
+	background-color: unset;
+	color: unset;
 
+/* Media query Start*/
 @media screen and (max-width: 500px) {
 	#ou {
 		height: 5em;
@@ -194,6 +261,7 @@ label {
 	}
 	#submit-button {
 		font-size: 14px;
+		margin-left:45%;
 	}
 	#logo{
 		text-align: center;
@@ -201,5 +269,10 @@ label {
 	span{
 		margin-right: auto;
 	    margin-left: auto;
+	}
+	.info{
+		font-size: 10px;
+		margin-left: 2%;
+	}
 	}
 }

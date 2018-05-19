@@ -2,7 +2,7 @@
 <?php
 ///display html menu.
 $pageTitle = "Search Results";
-require("header.php");
+require ("header.php");
 //require "validateData.php";
 
 $databasename ='walkingclub.sqlite';
@@ -15,7 +15,7 @@ if($db === false){
 if(isset($_POST['search-term']) && $_POST['search-term'] != ""){ /// check search input is nopt empty.
 
 $webdata = $_POST['search-term']; /// assingn variable.
-echo "<p>Searching...</p>";
+echo "<p id='searching'>Searching...</p>";
 
 /// prepare statement.
 
@@ -36,9 +36,36 @@ $result = $stmt->execute();
 
 /// display query data to user.
 while ($row = $result->fetchArray()){
-  echo '<p>' . "Name: " . htmlspecialchars($row['name']) . " | Walk-date: " . htmlspecialchars($row['walk_date']) . " | Start-time: " . htmlspecialchars($row['start_time']) .
-   " | Leader: " . htmlspecialchars($row['leader']) . " | Meeting-point: " . htmlspecialchars($row['meeting_point']) . " | Meeting-point Lat & Long: " . htmlspecialchars($row['meeting_latlong']) .
-   " | Distance: " . htmlspecialchars($row['distance']) . " | Route: " . htmlspecialchars($row['route']) . " | Notes: " . htmlspecialchars($row['notes']) . " | Status: " . htmlspecialchars($row['status']) .'</p>';
+
+  echo
+  "<table id='results' >
+  <tr>
+  <th>Name: </th>
+  <th>Walk-date: </th>
+  <th>Start-time: </th>
+  <th>Leader: </th>
+  <th>Meeting-point: </th>
+  <th>meeting_point Lat & Long: </th>
+  <th>Distance: </th>
+  <th>Route: </th>
+  <th>Notes: </th>
+  <th>Status: </th>
+  </tr>
+  <tr>
+  <td>" . htmlspecialchars($row['name']) . "</td>
+  <td>" . htmlspecialchars($row['walk_date']) ."</td>
+  <td>" . htmlspecialchars($row['start_time']) . "</td>
+  <td>" . htmlspecialchars($row['leader']) . "</td>
+  <td>" . htmlspecialchars($row['meeting_point']) . "</td>
+  <td>" . htmlspecialchars($row['meeting_latlong']) . "</td>
+  <td>" . htmlspecialchars($row['distance']) . "</td>
+  <td>" . htmlspecialchars($row['route']) . "</td>
+  <td>" . htmlspecialchars($row['notes']) . "</td>
+  <td>" . htmlspecialchars($row['status']) ."</td>
+  </tr>
+  </table>";
+
+echo "<br>";
 }
 
 if(!$row = $result->fetchArray()) { /// query data dose not exist.
