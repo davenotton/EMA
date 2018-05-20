@@ -1,12 +1,12 @@
 * {
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 body {
 	background-color: #a8ffac;
 	position: relative;
-	padding-bottom: 6%;
-
+  padding-bottom: 6%;
 }
 main-menu {
 	display: block;
@@ -24,7 +24,7 @@ main-menu {
 	padding-top: 4px;
 	padding-bottom: 4px;
 }
-#ou{
+#ou {
 	height: 2.9em;
 	padding-left: 2px;
 }
@@ -34,7 +34,7 @@ main-menu {
 	font-family: Trebuchet MS;
 	vertical-align: middle;
 }
-#walking-club{
+#walking-club {
 	padding: 1px;
 	font-size: 1em;
 }
@@ -61,34 +61,32 @@ li a:hover {
 	background-color: white;
 	color: #ff5d1d;
 }
-.info{
+.info {
 	font-size: 12px;
 	font-family: arial;
 	margin-left: 40%;
 	color: #D0FFD0;
 }
-.data-sent{
-font-size: 12px;
-font-family: arial;
-margin-left: 40%;
-color: blue;
+#data-sent {
+	font-size: 12px;
+	font-family: arial;
+	margin-left: 35%;
+	color: blue;
+	width:20%;
 }
-#search-div{
+#search-div {
 	margin: 2%;
 	font-size: 18px;
 	font-family: Trebuchet MS;
 	background-color: grey;
 	padding-bottom: 8px;
 	border-radius: 9px;
-
 }
-#search-input{
+#search-input {
 	width: 30%;
 	margin-top: 12px;
 	font-size: 18px;
 	font-family: Trebuchet MS;
-}
-
 }
 fieldset {
 	margin: 2px;
@@ -143,11 +141,10 @@ label {
 #feilds {
 	margin: 1%;
 }
-#ok-div{
-	text-align: center;
+#ok-div {
 	padding-top: 4px;
 }
-#ok-button{
+#ok-button {
 	border-radius: 12px;
 	background-color: #008CBA;
 	width: 10%;
@@ -155,20 +152,21 @@ label {
 	font-size: 20px;
 	color: white;
 	margin-top: 8px;
+	margin-left: 40%;
 }
 #results {
 	display: block;
 	overflow-x: auto;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 90%;
+	border-collapse: collapse;
+	width: 90%;
 	margin-left: 5%;
 }
 #results td, #results th {
 	border: 1px solid #ddd;
-  padding: 8px;
+	padding: 8px;
 }
-#results tr:nth-child(even){
+#results tr:nth-child(even) {
 	background-color: #f2f2f2;
 }
 #results tr:hover {
@@ -176,18 +174,18 @@ label {
 }
 #results th {
 	padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #238e8d;
-  color: white;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #238e8d;
+	color: white;
 	padding-left: 2px;
 	padding-right: 2px;
 }
-#searching{
+.searching {
 	margin-left: 10%;
 	margin-bottom: 4px;
 }
-footer{
+footer {
 	background-color: #222222;
 	text-align: center;
 	position: absolute;
@@ -196,12 +194,15 @@ footer{
 	height: 6%;
 	padding-top: 1%;
 }
-#copywrite{
+#foot-php {
+	position: fixed;
+}
+#copywrite {
 	border: unset;
 	background-color: unset;
 	color: white;
 }
-#contact, #contact a{
+#contact, #contact a {
 	border: unset;
 	background-color: unset;
 	font-size: unset;
@@ -217,18 +218,18 @@ footer{
 }
 .social a:hover {
 	text-overflow: unset;
-	overflow: unset
+	overflow: unset;
 	background-color: unset;
 	color: unset;
-
+}
 /* Media query Start*/
+
 @media screen and (max-width: 500px) {
 	#ou {
 		height: 5em;
 	}
-	#walking-club{
+	#walking-club {
 		font-size: 1.6em;
-
 	}
 	li {
 		width: 100%;
@@ -261,18 +262,30 @@ footer{
 	}
 	#submit-button {
 		font-size: 14px;
-		margin-left:45%;
+		margin-left: 45%;
 	}
-	#logo{
+	#logo {
 		text-align: center;
 	}
-	span{
+	span {
 		margin-right: auto;
-	    margin-left: auto;
+		margin-left: auto;
 	}
-	.info{
+	.info {
 		font-size: 10px;
 		margin-left: 2%;
 	}
+	#body{
+		padding-bottom: 14%;
 	}
+	body{
+		padding-bottom: unset;
+	}
+	footer {
+		position: unset;
+	}
+	#foot{
+	color: #222222;
+	height: 7em;
+}
 }

@@ -2,7 +2,8 @@
 <?php
 ///display html menu.
 $pageTitle = "Search Results";
-require ("header.php");
+require("header.php");
+require("footer.php");
 //require "validateData.php";
 
 $databasename ='walkingclub.sqlite';
@@ -15,7 +16,7 @@ if($db === false){
 if(isset($_POST['search-term']) && $_POST['search-term'] != ""){ /// check search input is nopt empty.
 
 $webdata = $_POST['search-term']; /// assingn variable.
-echo "<p id='searching'>Searching...</p>";
+echo "<p class='searching'>Searching...</p>";
 
 /// prepare statement.
 
@@ -69,10 +70,10 @@ echo "<br>";
 }
 
 if(!$row = $result->fetchArray()) { /// query data dose not exist.
-  echo "<p>No data could be found - Please enter new search.</p>";
+  echo "<p class='searching'>No data could be found - Please enter new search.</p>";
 }
 }
 else{ ///incorrect search term entered.
-  echo '<p>Please enter a search query.</p>';
+  echo "<p class='searching'>Please enter a search query.</p>";
 }
 ?>

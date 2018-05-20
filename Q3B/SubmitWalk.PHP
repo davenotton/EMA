@@ -8,6 +8,7 @@ $pageTitle = "Walk Submitted";
   //$pageTitle = "Walk Submission Failed";
 //}
 require("header.php");
+require("footer.php");
 
 $databasename ='walkingclub.sqlite';
 $db = new SQLite3($databasename);
