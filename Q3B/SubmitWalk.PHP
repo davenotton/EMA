@@ -1,12 +1,11 @@
 <?php
 
-//require("validateData.php");
-//if($valid == TRUE){
+require("validateData.php");
+if($valid == TRUE)
+{
+
 $pageTitle = "Walk Submitted";
-//}
-//else{
-  //$pageTitle = "Walk Submission Failed";
-//}
+
 require("header.php");
 require("footer.php");
 
@@ -49,11 +48,24 @@ $stmt->bindValue(':status', $status);
 
 $stmt->execute();
 
-//echo"<p>Data recived - proposed walk is saved to server.</p>";"
+?>
+<p></p>
+<p id='data-sent'>Data recived - proposed walk is saved to server.</p>
+<?php
+}
+else{
+  $pageTitle = "Walk Submission Failed";
+  require("header.php");
+  require("footer.php");
+  ?> <p id='data-sent'></p>
+  <p align='center'id='data-sent'>Submission failed - please try again.</p>
+  <div align='center'><p><?php echo $formerror;?></p></div>
+  <?php
+}
 ?>
 
-
 <div id="ok-div">
-  <p id="data-sent">Data recived - proposed walk is saved to server.</p>
+
   <a href="WalkSubmitForm.html"><button id="ok-button">OK</button></a>
+
 </div>
